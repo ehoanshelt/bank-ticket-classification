@@ -1,6 +1,6 @@
 import yaml
-from utils.filemanager import FileManager
-from utils.processing import Process_DataFrame
+from utils.filemanager_util import FileManager
+from utils.process_util import Process_DataFrame
 
 
 #Load up the raw_data as a DataFrame

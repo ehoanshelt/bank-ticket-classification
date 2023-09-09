@@ -9,13 +9,13 @@ stages:
       size: 83392514
     - path: src/process.py
       hash: md5
-      md5: 24299207ad507ffdb5fee1290d8069bd
-      size: 419
-    - path: src/utils/filemanager.py
+      md5: e7e679892b4eda5f036123d74d71aca6
+      size: 426
+    - path: src/utils/filemanager_util.py
       hash: md5
       md5: e2473c1f3fa09912d23ada92939695e2
       size: 845
-    - path: src/utils/processing.py
+    - path: src/utils/process_util.py
       hash: md5
       md5: d0109e6c90411488eba78758abcd826d
       size: 1767

@@ -2,8 +2,8 @@ stages:
   process_data:
     cmd: python src/process.py
     deps:
-      - src/utils/filemanager.py
-      - src/utils/processing.py
+      - src/utils/filemanager_util.py
+      - src/utils/process_util.py
       - data/raw/bank_tickets.json
       - src/process.py
     params:
