@@ -5,9 +5,22 @@ class FileManager:
     def __init__(self) -> None:
         pass
 
-    def file_to_dataframe(self, filepath:str, inputtype:str = "json") -> pd.DataFrame:
-        if inputtype == "json":
+    def get_file_extension(self, filename):
+        fnsplit = filename.split(".")
+        ext = fnsplit[len(fnsplit)-1]
+        return ext
+
+    def file_to_dataframe(self, filepath:str) -> pd.DataFrame:
+        ext = self.get_file_extension(filepath)
+
+        if ext == "json":
             df = pd.read_json(filepath)
+
+        if ext == "csv":
+            df = pd.read_csv(filepath)
+        
+        if ext == "xml":
+            df = pd.read_xml(filepath)
         
         return df
     
