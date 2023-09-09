@@ -20,11 +20,12 @@ class Process_DataFrame:
         print("Striping source data completed")
 
         if expected_column in self.data:
-            return True
+            return
         else:
             print("We're expecting {expected_column} to be present in the {column}. {expected_column} is not found")
             sys.exit() 
     
+    # Need to removed blanks from the feature field and remove records with null features.
     def remove_nulls(self, verbose:bool = True) -> bool:
         if verbose:
             print(f"Shape of Dataframe before nulls removed is {self.data.shape}")
@@ -38,7 +39,7 @@ class Process_DataFrame:
         if verbose:
             print(f"Shape of Dataframe after nulls removed is {self.data.shape}")
 
-        return True
+        return
     
     def process(self, verbose:bool = False):
         self.strip_source()
