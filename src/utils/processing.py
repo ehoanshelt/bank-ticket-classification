@@ -12,7 +12,7 @@ class Process_DataFrame:
 
     # We're expecting all the data we need to be in a _source column in the dataset.
     # We don't need any of the other data
-    def stripe_source(self, column:str = "_source", expected_column:str = "complaint_what_happened") -> bool:
+    def strip_source(self, column:str = "_source", expected_column:str = "complaint_what_happened") -> bool:
         
         print("Striping source data in progress")
         list = self.data.unstack()
@@ -39,3 +39,7 @@ class Process_DataFrame:
             print(f"Shape of Dataframe after nulls removed is {self.data.shape}")
 
         return True
+    
+    def process(self, verbose:bool = False):
+        self.strip_source()
+        self.remove_nulls(verbose=verbose)

@@ -10,7 +10,6 @@ raw_data = fm.file_to_dataframe(params["raw_file"])
 
 #Process raw Data
 pro_df = Process_DataFrame(raw_data)
-pro_df.stripe_source()
-pro_df.remove_nulls(verbose=True)
+pro_df.process(verbose=True)
 fm.dataframe_to_csv(pro_df.data, "data/processed", "process.csv")
 
