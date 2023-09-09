@@ -17,8 +17,8 @@ stages:
       size: 548
     - path: src/utils/processing.py
       hash: md5
-      md5: f0466524b60b424970fbaefcf3d7dd50
-      size: 1686
+      md5: d0109e6c90411488eba78758abcd826d
+      size: 1767
     params:
       params.yaml:
         process.raw_file: data/raw/bank_tickets.json
