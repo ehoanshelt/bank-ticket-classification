@@ -1,0 +1,10 @@
+stages:
+  process_data:
+    cmd: python src/process.py
+    deps:
+      - data/raw/bank_tickets.json
+      - src/process.py
+    params:
+      - process.raw_file
+    outs:
+      - data/processed/

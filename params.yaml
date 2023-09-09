@@ -1,2 +1,2 @@
 process:
-  raw_file: "data/raw/complaints-2021-05-14_08_16_.json"
+  raw_file: "data/raw/bank_tickets.json"
