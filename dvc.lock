@@ -9,8 +9,8 @@ stages:
       size: 83392514
     - path: src/process.py
       hash: md5
-      md5: e7e679892b4eda5f036123d74d71aca6
-      size: 426
+      md5: 4667bacfaa5c759e84bc7fa551ef64e9
+      size: 428
     - path: src/utils/filemanager_util.py
       hash: md5
       md5: e2473c1f3fa09912d23ada92939695e2
@@ -23,8 +23,7 @@ stages:
       params.yaml:
         process.raw_file: data/raw/bank_tickets.json
     outs:
-    - path: data/processed/
+    - path: data/processed/processed.csv
       hash: md5
-      md5: a8e3899d612e374b5bce778e4ffab2e4.dir
+      md5: a36b71c609d5ec7a3bd24bac5cc3c5a3
       size: 34785307
-      nfiles: 1

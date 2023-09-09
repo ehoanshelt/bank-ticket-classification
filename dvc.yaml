@@ -9,7 +9,7 @@ stages:
     params:
       - process.raw_file
     outs:
-      - data/processed/
+      - data/processed/processed.csv
     desc: "Takes the raw JSON file, pulled the column _source and converts the _source JSON to a dataframe.\
             It removed all blank and null rows for the feature column 'complaints what happened' that will \
             will need to further featurize for training/testing data"
