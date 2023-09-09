@@ -1,0 +1,22 @@
+schema: '2.0'
+stages:
+  process_data:
+    cmd: python src/process.py
+    deps:
+    - path: data/raw/bank_tickets.json
+      hash: md5
+      md5: 79c28033f1590a579c4cc03660438af5
+      size: 83392514
+    - path: src/process.py
+      hash: md5
+      md5: ad58c709ed19e39765e9d584e4909ccd
+      size: 447
+    params:
+      params.yaml:
+        process.raw_file: data/raw/bank_tickets.json
+    outs:
+    - path: data/processed/
+      hash: md5
+      md5: a8e3899d612e374b5bce778e4ffab2e4.dir
+      size: 34785307
+      nfiles: 1
