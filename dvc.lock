@@ -27,3 +27,30 @@ stages:
       hash: md5
       md5: a36b71c609d5ec7a3bd24bac5cc3c5a3
       size: 34785307
+  featurize:
+    cmd: python src/featurization.py
+    deps:
+    - path: data/processed/processed.csv
+      hash: md5
+      md5: a36b71c609d5ec7a3bd24bac5cc3c5a3
+      size: 34785307
+    - path: src/featurization.py
+      hash: md5
+      md5: 069a7ff5459293660c0895a81265faa9
+      size: 471
+    - path: src/utils/featurization_util.py
+      hash: md5
+      md5: c2b42288d73ce0f958baa1913c5516dc
+      size: 2239
+    - path: src/utils/filemanager_util.py
+      hash: md5
+      md5: e2473c1f3fa09912d23ada92939695e2
+      size: 845
+    params:
+      params.yaml:
+        featurization.processed_file: data/processed/processed.csv
+    outs:
+    - path: data/featured/featurized_data.csv
+      hash: md5
+      md5: 794439ba2911874147083b61c0927508
+      size: 35599586

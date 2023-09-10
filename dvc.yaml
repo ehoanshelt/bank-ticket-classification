@@ -13,3 +13,15 @@ stages:
     desc: "Takes the raw JSON file, pulled the column _source and converts the _source JSON to a dataframe.\
             It removed all blank and null rows for the feature column 'complaints what happened' that will \
             will need to further featurize for training/testing data"
+  featurize:
+    cmd: python src/featurization.py
+    deps:
+      - src/utils/filemanager_util.py
+      - src/utils/featurization_util.py
+      - data/processed/processed.csv
+      - src/featurization.py
+    params:
+      - featurization.processed_file
+    outs:
+      - data/featured/featurized_data.csv
+    desc: "Takes the complaint_what_happened field and creates a featurized dataset."

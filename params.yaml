@@ -1,2 +1,4 @@
 process:
   raw_file: "data/raw/bank_tickets.json"
+featurization:
+  processed_file: "data/processed/processed.csv"
